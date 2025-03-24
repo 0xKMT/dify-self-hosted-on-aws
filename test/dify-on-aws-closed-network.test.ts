@@ -9,7 +9,7 @@ test('Snapshot test', () => {
   const app = new cdk.App();
 
   const props: EnvironmentProps = {
-    awsRegion: 'us-west-2',
+    awsRegion: 'ap-southeast-1',
     awsAccount: '123456789012',
     allowedIPv4Cidrs: ['0.0.0.0/0'],
     allowedIPv6Cidrs: ['::/0'],

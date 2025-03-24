@@ -112,7 +112,7 @@ You can use the [External Knowledge Base feature](https://docs.dify.ai/guides/kn
 4. Fill the form as below
     1. External Knowledge Name / Knowledge Description: any string
     2. External Knowledge API: the external API you created in the previous step
-    3. External Knowledge ID: The Bedrock Knowledge Base ID you want to use. The AWS region is us-west-2 by default, but you can override the AWS region by adding region prefix with colon, e.g. `us-east-1:QWERTYASDF`.
+    3. External Knowledge ID: The Bedrock Knowledge Base ID you want to use. The AWS region is ap-southeast-1 by default, but you can override the AWS region by adding region prefix with colon, e.g. `us-east-1:QWERTYASDF`.
 5. Now you can use the knowledge from Dify tools.
 
 For more information, please refer to this article: [Dify can also do RAG on documents with charts and graphs!](https://qiita.com/mabuchs/items/85fb2dad19ec441c870c)

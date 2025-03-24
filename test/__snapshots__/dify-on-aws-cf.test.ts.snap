@@ -94,7 +94,7 @@ exports[`Snapshot test (with CloudFront) 1`] = `
                           {
                             "Ref": "AWS::Partition",
                           },
-                          ":ssm:us-west-2:123456789012:parameter/cdk/exports/*",
+                          ":ssm:ap-southeast-1:123456789012:parameter/cdk/exports/*",
                         ],
                       ],
                     },
@@ -130,7 +130,7 @@ exports[`Snapshot test (with CloudFront) 1`] = `
               "Ref": "Certificate4E7ABB08",
             },
           },
-          "region": "us-west-2",
+          "region": "ap-southeast-1",
         },
       },
       "Type": "Custom::CrossRegionExportWriter",
@@ -266,7 +266,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
         "Fn::Join": [
           "",
           [
-            "aws ecs execute-command --region us-west-2 --cluster ",
+            "aws ecs execute-command --region ap-southeast-1 --cluster ",
             {
               "Ref": "ClusterEB0386A7",
             },
@@ -280,7 +280,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
         "Fn::Join": [
           "",
           [
-            "aws ecs list-tasks --region us-west-2 --cluster ",
+            "aws ecs list-tasks --region ap-southeast-1 --cluster ",
             {
               "Ref": "ClusterEB0386A7",
             },
@@ -315,7 +315,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "4cd2f2411231aa073e609dc99a49b5c5e974252bf9abf0f9350d237d17cce8be.zip",
         },
         "Handler": "index.handler",
@@ -392,7 +392,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":rds:us-west-2:123456789012:cluster:",
+                    ":rds:ap-southeast-1:123456789012:cluster:",
                     {
                       "Ref": "PostgresCluster53E5BDAB",
                     },
@@ -713,7 +713,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
           "Aliases": [
             "dify.example.com",
           ],
-          "Comment": "Dify distribution (TestStack - us-west-2)",
+          "Comment": "Dify distribution (TestStack - ap-southeast-1)",
           "DefaultCacheBehavior": {
             "AllowedMethods": [
               "GET",
@@ -1019,7 +1019,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
             "Ref": "AlbC1372A32",
           },
           "HTTPPort": 80,
-          "Name": "TestStack-Alb-4064853B-us-west-2",
+          "Name": "TestStack-Alb-4064853B-ap-southeast-1",
           "OriginProtocolPolicy": "http-only",
         },
       },
@@ -1338,7 +1338,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "S3_REGION",
-                "Value": "us-west-2",
+                "Value": "ap-southeast-1",
               },
               {
                 "Name": "S3_USE_AWS_MANAGED_IAM",
@@ -1378,7 +1378,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "SMTP_SERVER",
-                "Value": "email-smtp.us-west-2.amazonaws.com",
+                "Value": "email-smtp.ap-southeast-1.amazonaws.com",
               },
               {
                 "Name": "SMTP_PORT",
@@ -1411,7 +1411,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "ApiServiceTaskMainLogGroup4A8BF33F",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -1551,7 +1551,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":ssm:us-west-2:123456789012:parameter/",
+                      ":ssm:ap-southeast-1:123456789012:parameter/",
                       {
                         "Ref": "RedisBrokerUrlA8582E06",
                       },
@@ -1684,7 +1684,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "S3_REGION",
-                "Value": "us-west-2",
+                "Value": "ap-southeast-1",
               },
               {
                 "Name": "DB_DATABASE",
@@ -1716,7 +1716,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "SMTP_SERVER",
-                "Value": "email-smtp.us-west-2.amazonaws.com",
+                "Value": "email-smtp.ap-southeast-1.amazonaws.com",
               },
               {
                 "Name": "SMTP_PORT",
@@ -1739,7 +1739,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "ApiServiceTaskWorkerLogGroup48EED12F",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -1873,7 +1873,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":ssm:us-west-2:123456789012:parameter/",
+                      ":ssm:ap-southeast-1:123456789012:parameter/",
                       {
                         "Ref": "RedisBrokerUrlA8582E06",
                       },
@@ -1926,7 +1926,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
           {
             "Essential": false,
             "Image": {
-              "Fn::Sub": "123456789012.dkr.ecr.us-west-2.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-123456789012-us-west-2:8212bb6032c6f45fe8aa3802d732a1c334e09486001a46c78816d50319722a0b",
+              "Fn::Sub": "123456789012.dkr.ecr.ap-southeast-1.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-123456789012-ap-southeast-1:8212bb6032c6f45fe8aa3802d732a1c334e09486001a46c78816d50319722a0b",
             },
             "MountPoints": [
               {
@@ -1970,7 +1970,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "ApiServiceTaskSandboxLogGroupDDF292A0",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -2034,7 +2034,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "AWS_REGION",
-                "Value": "us-west-2",
+                "Value": "ap-southeast-1",
               },
               {
                 "Name": "PLUGIN_STORAGE_TYPE",
@@ -2116,7 +2116,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "S3_ENDPOINT",
-                "Value": "https://s3.us-west-2.amazonaws.com",
+                "Value": "https://s3.ap-southeast-1.amazonaws.com",
               },
             ],
             "Essential": true,
@@ -2127,7 +2127,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "ApiServiceTaskPluginDaemonLogGroupB382B492",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -2271,7 +2271,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                       {
                         "Ref": "AWS::Partition",
                       },
-                      ":ssm:us-west-2:123456789012:parameter/",
+                      ":ssm:ap-southeast-1:123456789012:parameter/",
                       {
                         "Ref": "RedisBrokerUrlA8582E06",
                       },
@@ -2301,12 +2301,12 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               },
               {
                 "Name": "BEDROCK_REGION",
-                "Value": "us-west-2",
+                "Value": "ap-southeast-1",
               },
             ],
             "Essential": true,
             "Image": {
-              "Fn::Sub": "123456789012.dkr.ecr.us-west-2.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-123456789012-us-west-2:64ce6f060d671ff40122ebae64f14d89fd2d3eb82237fae0284034b4de27d0d9",
+              "Fn::Sub": "123456789012.dkr.ecr.ap-southeast-1.\${AWS::URLSuffix}/cdk-hnb659fds-container-assets-123456789012-ap-southeast-1:64ce6f060d671ff40122ebae64f14d89fd2d3eb82237fae0284034b4de27d0d9",
             },
             "LogConfiguration": {
               "LogDriver": "awslogs",
@@ -2314,7 +2314,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "ApiServiceTaskExternalKnowledgeBaseAPILogGroupE8D1DD85",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -2410,7 +2410,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":ssm:us-west-2:123456789012:parameter/",
+                    ":ssm:ap-southeast-1:123456789012:parameter/",
                     {
                       "Ref": "RedisBrokerUrlA8582E06",
                     },
@@ -2466,7 +2466,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":ecr:us-west-2:123456789012:repository/cdk-hnb659fds-container-assets-123456789012-us-west-2",
+                    ":ecr:ap-southeast-1:123456789012:repository/cdk-hnb659fds-container-assets-123456789012-ap-southeast-1",
                   ],
                 ],
               },
@@ -2691,7 +2691,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "d41c8e6342cd078b5ea5aec11522bdb605eae00f4bb98a3fb0b44c827e9b5ca9.zip",
         },
         "Handler": "__entrypoint__.handler",
@@ -2745,7 +2745,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                         {
                           "Ref": "AWS::Partition",
                         },
-                        ":ssm:us-west-2:123456789012:parameter/cdk/exports/TestStack/*",
+                        ":ssm:ap-southeast-1:123456789012:parameter/cdk/exports/TestStack/*",
                       ],
                     ],
                   },
@@ -2765,7 +2765,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
         },
         "Description": {
@@ -2907,7 +2907,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
         "HostedZoneId": "DUMMY",
         "Name": "bounce.example.com.",
         "ResourceRecords": [
-          "10 feedback-smtp.us-west-2.amazonses.com",
+          "10 feedback-smtp.ap-southeast-1.amazonses.com",
         ],
         "TTL": "1800",
         "Type": "MX",
@@ -3001,7 +3001,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
             "/cdk/exports/TestStack/TestUsEast1Stackuseast1RefCertificate4E7ABB088DEBDDD5": "{{resolve:ssm:/cdk/exports/TestStack/TestUsEast1Stackuseast1RefCertificate4E7ABB088DEBDDD5}}",
           },
           "prefix": "TestStack",
-          "region": "us-west-2",
+          "region": "ap-southeast-1",
         },
         "ServiceToken": {
           "Fn::GetAtt": [
@@ -3020,7 +3020,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "2819175352ad1ce0dae768e83fc328fb70fb5f10b4a8ff0ccbcb791f02b0716d.zip",
         },
         "Handler": "index.handler",
@@ -3289,7 +3289,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":rds:us-west-2:123456789012:cluster:",
+                    ":rds:ap-southeast-1:123456789012:cluster:",
                     {
                       "Ref": "PostgresCluster53E5BDAB",
                     },
@@ -3324,7 +3324,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3336,7 +3336,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3359,7 +3359,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3371,7 +3371,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3398,7 +3398,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3410,7 +3410,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3433,7 +3433,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3445,7 +3445,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
               {
                 "Ref": "AWS::Partition",
               },
-              ":rds:us-west-2:123456789012:cluster:",
+              ":rds:ap-southeast-1:123456789012:cluster:",
               {
                 "Ref": "PostgresCluster53E5BDAB",
               },
@@ -3472,7 +3472,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                     {
                       "Ref": "AWS::Partition",
                     },
-                    ":rds:us-west-2:123456789012:cluster:",
+                    ":rds:ap-southeast-1:123456789012:cluster:",
                     {
                       "Ref": "PostgresCluster53E5BDAB",
                     },
@@ -4392,7 +4392,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
                 "awslogs-group": {
                   "Ref": "WebServiceTaskMainLogGroup38DB76FC",
                 },
-                "awslogs-region": "us-west-2",
+                "awslogs-region": "ap-southeast-1",
                 "awslogs-stream-prefix": "log",
               },
             },
@@ -4499,7 +4499,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "681d284a27fcbbccf41227929a9c13895a5859749b289f961ca68f3b8d47d137.zip",
         },
         "Description": "src/provider/credentials-handler.lambda.ts",
@@ -4621,7 +4621,7 @@ exports[`Snapshot test (with CloudFront) 2`] = `
       ],
       "Properties": {
         "Code": {
-          "S3Bucket": "cdk-hnb659fds-assets-123456789012-us-west-2",
+          "S3Bucket": "cdk-hnb659fds-assets-123456789012-ap-southeast-1",
           "S3Key": "bdc104ed9cab1b5b6421713c8155f0b753380595356f710400609664d3635eca.zip",
         },
         "Description": "AWS CDK resource provider framework - onEvent (TestStack/cdk-ses-smtp-credentials.CredentialsProvider/ses-smtp-credentials-provider)",
